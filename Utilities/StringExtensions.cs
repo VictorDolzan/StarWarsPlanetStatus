@@ -8,4 +8,11 @@ public static class StringExtensions
             ? resultParsed
             : null;
     }
+    
+    public static long? ToLongOrNull(this string? input)
+    {
+        return long.TryParse(input, out long resultParsed)
+            ? resultParsed
+            : null;
+    }
 }
