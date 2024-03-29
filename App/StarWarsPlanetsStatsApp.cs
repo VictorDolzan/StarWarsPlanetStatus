@@ -22,10 +22,7 @@ public class StarWarsPlanetsStatsApp
     {
         var planets = await _planetsReader.Read();
 
-        foreach (var planet in planets)
-        {
-            Console.WriteLine(planet);
-        }
+        _planetStatsUserInteractor.Show(planets);
 
         _planetsStatisticsAnalyzer.Analyze(planets);
     }
